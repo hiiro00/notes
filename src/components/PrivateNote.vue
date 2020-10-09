@@ -12,7 +12,25 @@
       <textarea v-model="content" name="content" class="form" placeholder="Content"></textarea><br/>
       <button class="submit" v-on:click="createPrivateNote()">Post</button>
     </div>
+    
+    <div class="equip">
+      <h1>機材  aaa  risuto</h1>
+      <div class="private-notes-area">
+        <div v-for="(privateNote,id) in privateNotes" v-bind:key="id">
+          <div class="private-note">
+            {{ privateNote.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
+  
+
+  
+  
+  
+  
 </template>
 <script>
 import { API, graphqlOperation} from "aws-amplify"
@@ -72,6 +90,8 @@ export default {
   }
 }
 </script>
+
+
 <style scoped>
   .form {
     font-size: 20px;
