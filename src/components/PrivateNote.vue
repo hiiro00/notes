@@ -14,7 +14,7 @@
     </div>
     
     <div class="equip">
-      <h1>機材  aaa  risuto</h1>
+      <h1>機材    リスト</h1>
       <div class="private-notes-area">
         <div v-for="(privateNote,id) in privateNotes" v-bind:key="id">
           <div class="private-note">
